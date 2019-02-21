@@ -1,0 +1,16 @@
+package com.tripeasy.hotel.hotelservice.resource;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+//@RequestMapping("/hotels")
+@RestController("/hotels")
+public class HotelResource {
+	
+	public String check() {
+		
+		return "Hello";
+		
+	}
+
+}

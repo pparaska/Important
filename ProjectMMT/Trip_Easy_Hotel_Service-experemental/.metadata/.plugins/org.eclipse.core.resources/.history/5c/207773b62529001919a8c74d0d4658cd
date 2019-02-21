@@ -1,0 +1,26 @@
+package com.tripeasy.hotel.hotelservice.restcontroller;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class RestControllerTest {
+
+	@Autowired
+	private TestRestTemplate testRestTemplate;
+
+	@Test
+	public void testGetCourseById() throws Exception {
+		 
+		ResponseEntity<HotelResource> responseEntity = testRestTemplate.getForEntity("/students/Student1/courses/Course1", StudentController.class);
+
+		System.out.println("in resourse " + responseEntity);
+		// assert
+		assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+	}
+}

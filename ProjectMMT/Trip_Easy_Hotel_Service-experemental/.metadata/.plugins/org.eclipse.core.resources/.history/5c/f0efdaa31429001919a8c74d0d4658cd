@@ -1,0 +1,28 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+
+public class HotelServiceImpl implements HotelService {
+
+	@Autowired
+	private HotelRepository hotelRepository;
+	
+	@Override
+	public List<Hotel> getAllHotels() {
+	 
+	List<Hotel>  hotels = hotelRepository.findAll();
+		return hotels;
+	}
+
+	@Override
+	public Hotel getHotelById(int hotelId) {
+		hotelRepository.findById(hotelId);
+	}
+
+	
+}

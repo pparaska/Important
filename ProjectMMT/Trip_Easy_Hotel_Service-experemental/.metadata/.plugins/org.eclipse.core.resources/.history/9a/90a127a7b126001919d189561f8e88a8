@@ -1,0 +1,9 @@
+package com.tripeasy.hotel.hotelservice.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+
+public interface HotelRepository extends MongoRepository<Hotel, Integer>{
+
+}

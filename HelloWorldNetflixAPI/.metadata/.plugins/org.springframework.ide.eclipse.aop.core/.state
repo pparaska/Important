@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="centralized-config"/>
+<aop-project name="AccountService"/>
+<aop-project name="APIGateway-ProxyServer"/>
+<aop-project name="eureka-service"/>
+<aop-project name="TransactionService"/>
+<aop-project name="hello-world"/>
+<aop-project name="website"/>
+</aop-reference-model>

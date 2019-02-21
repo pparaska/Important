@@ -1,0 +1,1 @@
+zuul.routes.AccountService.url=http://localhost:9090

@@ -1,0 +1,68 @@
+package com.tripeasy.hotel.hotelservice.restcontroller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.tripeasy.hotel.hotelservice.resource.HotelResource;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class RestControllerTest {
+
+	@Autowired
+	private TestRestTemplate testRestTemplate;
+
+	@Test
+	public void testOfWrongURL() throws Exception {
+
+		ResponseEntity<HotelResource> responseEntity = testRestTemplate.getForEntity("/hotel/", HotelResource.class);
+		assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+
+	}
+
+	@Test
+	public void testOfBadRequest() throws Exception {
+
+		ResponseEntity<HotelResource> responseEntity = testRestTemplate.getForEntity("/hotels/ftf",
+				HotelResource.class);
+		assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+
+	}
+
+	@Test
+	public void testOfRightURLGetHotelsByCityNameExistsInDatabse() throws Exception {
+
+		ResponseEntity<String> responseEntity = testRestTemplate
+				.getForEntity("/hotels/?city=Mumbai", String.class);
+		System.out.println(responseEntity);
+		assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+	}
+	
+	@Test
+	public void testOfGetHotelsByCityNameDoesntExist() throws Exception {
+
+		ResponseEntity<String> responseEntity = testRestTemplate
+				.getForEntity("/hotels/?city=Pune", String.class);
+		System.out.println(responseEntity);
+		assertEquals(HttpStatus.NO_CONTENT, responseEntity.getStatusCode());
+	}
+	
+	@Test
+	public void testOfAddNewHotel() throws Exception {
+
+		ResponseEntity<String> responseEntity = testRestTemplate.postForEntity("/hotels/", hotel, String.class);
+		System.out.println(responseEntity);
+		assertEquals(HttpStatus.NO_CONTENT, responseEntity.getStatusCode());
+	}
+}

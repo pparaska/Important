@@ -1,0 +1,44 @@
+package com.tripeasy.hotel.hotelservice.resource;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.service.HotelService;
+
+@RequestMapping("/hotels")
+@RestController
+public class HotelResource {
+	
+	@Autowired
+	private HotelService hotelService;
+	
+	@GetMapping
+	public ResponseEntity<List<Hotel>> getAllHotelsOfCity(@RequestParam("city") String city){
+		List<Hotel> hotels = hotelService.getByCity(city).get();
+		if(hotels.isEmpty()) {
+			return new ResponseEntity<>(hotels ,HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<>(hotels ,HttpStatus.OK);
+	}
+	
+	@GetMapping("/{hotelId}")
+	public ResponseEntity<Hotel> getHotelById(@PathVariable Integer hotelId) {
+		Optional<Hotel> hotel = hotelService.getHotelById(hotelId);
+		System.out.println("Outside if " +hotel);
+		if(!hotel.isPresent())
+		{
+ 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<>(hotel.get(), HttpStatus.OK);
+	}
+
+}

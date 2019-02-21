@@ -1,0 +1,18 @@
+package com.tripeasy.hotel.hotelservice.servicetest;
+
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBeans;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ServiceTest {
+
+	@MockBean
+	private HotelRepository hotelRepository;
+	 
+	 @Autowired
+	 private HotelService hotelService;
+}

@@ -1,0 +1,31 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+public class Address {
+	private String area;
+	private String landMark;
+	private String state;
+	private String nation;
+	private String city;
+	private Integer pincode;
+
+	public Address() {
+		super();
+
+	}
+
+	public Address(String area, String landMark, String state, String nation, String city, Integer pincode) {
+		super();
+		this.area = area;
+		this.landMark = landMark;
+		this.state = state;
+		this.nation = nation;
+		this.city = city;
+		this.pincode = pincode;
+	}
+
+	 
+	 
+
+}

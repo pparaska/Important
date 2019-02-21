@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RestControllerTest" project="hotel-service" tests="11" started="11" failures="0" errors="0" ignored="1">
+  <testsuite name="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="1.228">
+    <testcase name="testOfGetAllHotels" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.929"/>
+    <testcase name="testOfGetHotelsByHotelIdDosentExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.045"/>
+    <testcase name="testOfAddNewHotelWithRightdata" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.09"/>
+    <testcase name="testOfGetHotelsByCityNameDoesntExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.026"/>
+    <testcase name="testOfUpdateHotelWithRightdata" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.034"/>
+    <testcase name="testOfAddNewHotelWithWrongData" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.016"/>
+    <testcase name="testOfdeleteHotelByIdExistInDb" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.001" ignored="true"/>
+    <testcase name="testOfGetHotelsByHotelIdExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.015"/>
+    <testcase name="testOfGetHotelsByCityNameExistsInDatabse" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.013"/>
+    <testcase name="testOfBadRequest" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.027"/>
+    <testcase name="testOfWrongURL" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.032"/>
+  </testsuite>
+</testrun>

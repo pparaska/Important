@@ -1,0 +1,58 @@
+package com.tripeasy.bookings.bookingservice.entity;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.stereotype.Component;
+
+import com.tripeasy.bookings.bookingservice.hotelentity.Hotel;
+
+@Component
+public class Booking {
+
+	@Id
+	private Integer bookingID;
+	private String bookingType;
+	private Object bookingDetails;
+	private LocalDateTime dateOfBooking;
+	private Double totalCost;
+	private List<Customer> customers;
+	private Profile bookedBy;
+	private Hotel hotel;
+	private Flight flight;
+	private LocalDateTime checkInDate;
+	private LocalDateTime checkOutDate;
+	//private Integer numberOfCustomers;
+	private Integer numberOfGuest;
+	private Integer numberOfPassengers;
+	
+	public Booking() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Booking(Integer bookingID, String bookingType, Object bookingDetails, LocalDateTime dateOfBooking,
+			Double totalCost, List<Customer> customers, Profile bookedBy, Hotel hotel, Flight flight,
+			LocalDateTime checkInDate, LocalDateTime checkOutDate, Integer numberOfGuest, Integer numberOfPassengers) {
+		super();
+		this.bookingID = bookingID;
+		this.bookingType = bookingType;
+		this.bookingDetails = bookingDetails;
+		this.dateOfBooking = dateOfBooking;
+		this.totalCost = totalCost;
+		this.customers = customers;
+		this.bookedBy = bookedBy;
+		this.hotel = hotel;
+		this.flight = flight;
+		this.checkInDate = checkInDate;
+		this.checkOutDate = checkOutDate;
+		this.numberOfGuest = numberOfGuest;
+		this.numberOfPassengers = numberOfPassengers;
+	}
+	
+	
+
+	
+	}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ServiceTest" project="hotel-service" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.334">
+    <testcase name="testCreateHotel" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.256"/>
+    <testcase name="testGetHotelByName" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.059"/>
+    <testcase name="testGetHotelById" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.007"/>
+    <testcase name="testGetHotels" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.011"/>
+  </testsuite>
+</testrun>

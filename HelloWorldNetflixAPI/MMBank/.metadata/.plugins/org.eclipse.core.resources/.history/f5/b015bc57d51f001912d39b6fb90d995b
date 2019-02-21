@@ -1,0 +1,15 @@
+package com.capgemini.mmbank.zuulproxyserver;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@EnableZuulProxy
+@SpringBootApplication
+public class ZuulProxyServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ZuulProxyServerApplication.class, args);
+	}
+
+}
+

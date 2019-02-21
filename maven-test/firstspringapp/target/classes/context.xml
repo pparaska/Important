@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- The below tag is for Annotation - Comment Bean tags to use Annotation -->
+	<!-- <context:component-scan base-package="com.capgemini.app"/> -->
+
+	<context:property-placeholder
+		location="classpath:context.properties" />
+	<bean id="organization"
+		class="com.capgemini.app.bean.Organization">
+		<property name="boardMembers">
+			<list>
+				<value>Arun Arora</value>
+				<value>Vineet Kumar</value>
+				<value>Pradnya Singh</value>
+			</list>
+		</property>
+
+		<property name="branchManagers">
+			<map>
+				<entry key="Finance" value="Shanti Prasad" />
+				<entry key="IT" value="Ashok Kumar Jain " />
+				<entry key="Sales and Marketing" value="Swminathan Ayyar" />
+			</map>
+		</property>
+
+		<property name="cities">
+			<set>
+				<value>Mumbai</value>
+				<value>Paris</value>
+				<value>Delhi</value>
+			</set>
+		</property>
+		<property name="dateOfEstablishment">
+			<bean class="java.time.LocalDate" factory-method="now">
+			</bean>
+		</property>
+		<property name="ipAddresses" value="${ipAddress}">
+		</property>
+		<property name="listed" value="true"></property>
+		<property name="name" value="capgemini"></property>
+		<property name="orgId" value="101"></property>
+		<property name="shareValue" value="500"></property>
+	</bean>
+
+
+	<!-- <bean name="dtEditor" id="dtEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor"> 
+		<constructor-arg ref="sdtformat" /> <constructor-arg value="true" /> </bean> 
+		<bean id="sdtformat" class="java.text.SimpleDateFormat"> <constructor-arg 
+		value="dd-MM-yyyy" /> </bean> <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer"> 
+		<property name="customEditors"> <map> <entry key="java.util.Date"> <ref bean="dtEditor" 
+		/> </entry> </map> </property> </bean> -->
+
+	<!-- <bean id="organization2" class="com.capgemini.app.bean.Organization"> 
+		<constructor-arg type = "int" value = "101"/> <constructor-arg type="java.lang.String" 
+		value="Poonam" /> <constructor-arg type = "localDate" value = "Poonam"/> 
+		</bean> -->
+</beans>
+
+
+
+
+

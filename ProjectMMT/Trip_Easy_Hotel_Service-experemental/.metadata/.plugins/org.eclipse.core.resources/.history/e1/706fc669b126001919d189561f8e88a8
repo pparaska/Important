@@ -1,0 +1,11 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+public class Address {
+
+	private String area;
+	private String landMark;
+	private String State;
+	private String nation;
+
+	
+}

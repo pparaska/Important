@@ -1,0 +1,9 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+
+public interface HotelService {
+
+	void addNewHotel(Hotel hotel);
+
+}

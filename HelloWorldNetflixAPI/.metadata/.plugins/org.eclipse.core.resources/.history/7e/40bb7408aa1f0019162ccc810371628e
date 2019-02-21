@@ -1,0 +1,14 @@
+package com.capgemini.app.APIGatewayProxyServer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ApiGatewayProxyServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ApiGatewayProxyServerApplication.class, args);
+	}
+
+}
+

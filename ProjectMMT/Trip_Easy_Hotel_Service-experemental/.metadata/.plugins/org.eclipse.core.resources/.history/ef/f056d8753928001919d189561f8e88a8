@@ -1,0 +1,64 @@
+package com.tripeasy.hotel.hotelservice.resource;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.service.HotelService;
+
+@RestController
+@RequestMapping("/hotels")
+public class HotelResource {
+
+	@Autowired
+	private RestTemplate restTemplate;
+
+	@Autowired
+	private HotelService hotelService;
+
+	@PostMapping
+	public void addHotel(@RequestBody Hotel hotel) {
+		hotelService.addNewHotel(hotel);
+	}
+
+	/*
+	 * @GetMapping public ResponseEntity<List<Hotel>> getAllHotels() { List<Hotel>
+	 * hotels = hotelService.getAllHotels(); System.out.println(hotels); return new
+	 * ResponseEntity<>(hotels, HttpStatus.OK); }
+	 * 
+	 * @GetMapping("/{hotelId}") public ResponseEntity<Hotel>
+	 * getHotelById(@PathVariable Integer hotelId) { Hotel hotel =
+	 * hotelService.getHotelById(hotelId).get(); return new ResponseEntity<>(hotel,
+	 * HttpStatus.OK); }
+	 */
+	@GetMapping("/hotelName")
+	public ResponseEntity<Hotel> getHotelByName(@RequestParam String hotelName) {
+		Hotel hotel = hotelService.getHotelByHotelName(hotelName).get();
+		System.out.println(hotel);
+		return new ResponseEntity<>(hotel, HttpStatus.OK);
+	}
+	
+	@PutMapping("/{hotelId}")
+	public void updateHotel(@PathVariable Integer hotelId, @RequestBody Hotel hotel) {
+		hotelService.update(hotel);
+	}
+
+	
+
+	@DeleteMapping("/{hotelId}")
+	public void deleteHotelById(@PathVariable Integer hotelId) {
+		hotelService.deleteHotelById(hotelId);
+	}
+}

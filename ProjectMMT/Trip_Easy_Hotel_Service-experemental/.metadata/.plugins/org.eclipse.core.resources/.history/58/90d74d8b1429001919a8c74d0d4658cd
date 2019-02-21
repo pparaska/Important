@@ -1,0 +1,16 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+
+@Service
+public interface HotelService  {
+
+	public List<Hotel> getAllHotels();
+
+	public Hotel getHotelById(int i);
+
+}

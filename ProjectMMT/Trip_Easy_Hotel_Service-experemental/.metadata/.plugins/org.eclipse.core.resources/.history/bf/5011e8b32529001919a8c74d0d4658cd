@@ -1,0 +1,90 @@
+package com.tripeasy.hotel.hotelservice.servicetest;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.stubbing.OngoingStubbing;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
+import static org.mockito.Mockito.when;
+import com.tripeasy.hotel.hotelservice.entity.Address;
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.entity.Room;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+import com.tripeasy.hotel.hotelservice.service.HotelService;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+//@DataMongoTest
+public class ServiceTest {
+
+	@MockBean
+	private HotelRepository hotelRepository;
+
+	private HashMap<Integer, String> review = new HashMap<>();
+	private Set<Room> rooms = new HashSet<>();
+	private List<String> pics = new ArrayList<String>();
+	private List<String> hotelPic = new ArrayList<String>();
+
+	private Map<String, List<String>> facilities = new HashMap<String, List<String>>();
+	List<String> hotelFacilities = new ArrayList<String>();
+
+	@Autowired
+	private HotelService hotelService;
+
+ 
+	/*
+	 * @Test public void testFindSimpleHotelObject() {
+	 * 
+	 * hotelFacilities.add("Wi-fi"); hotelFacilities.add("Conference Facilities");
+	 * hotelFacilities.add("Newspapers In Lobby");
+	 * hotelFacilities.add("Room Service (24 Hours)"); review.put(5, "Its Awesome");
+	 * pics.add("room image");
+	 * 
+	 * pics.add("room image2"); pics.add("room image3"); pics.add("room image4");
+	 * pics.add("room image5");
+	 * 
+	 * rooms.add(new Room(1, "AC", 4100.0, 2, "Double", true, pics));
+	 * hotelPic.add("Ho\\ttel Image");
+	 * 
+	 * hotelPic.add("Hotel Image2"); hotelPic.add("Hotel Image3");
+	 * hotelPic.add("Hotel Image4");
+	 * 
+	 * facilities.put("Taj", hotelFacilities);
+	 * 
+	 * System.out.println("start in "); Hotel actualHotel =
+	 * hotelService.getHotelById(103); System.out.println("actual is =" +
+	 * actualHotel); Hotel expectedHotel = new Hotel(102, "Taj", new
+	 * Address("Sector 2", "Neer to Cap", "Maharashtra", "India", "Mumbai", 415205),
+	 * review, rooms, hotelPic, facilities,
+	 * "In description it is best hotel in India", 50); assertEquals(expectedHotel,
+	 * actualHotel);
+	 * 
+	 * }
+	 */
+
+	@Test
+	public void testCreateHotel() {
+
+		System.out.println("start");
+
+		List<Hotel> hotels = hotelRepository.findAll();
+		System.out.println(hotels);
+		System.out.println("hotels = " +hotelService.getAllHotels());
+		assertEquals(24, hotelService.getAllHotels());
+
+	}
+
+}

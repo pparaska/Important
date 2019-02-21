@@ -1,0 +1,6 @@
+server.port=8764
+
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+
+spring.main.allow-bean-definition-overriding=true

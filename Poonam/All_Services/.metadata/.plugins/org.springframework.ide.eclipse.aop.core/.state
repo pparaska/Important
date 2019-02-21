@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="TripEasy"/>
+<aop-project name="booking-service-TDD"/>
+<aop-project name="hotel-service"/>
+<aop-project name="search"/>
+<aop-project name="flight-service"/>
+</aop-reference-model>

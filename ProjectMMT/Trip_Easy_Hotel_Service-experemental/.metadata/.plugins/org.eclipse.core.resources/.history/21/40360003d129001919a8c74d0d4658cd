@@ -1,0 +1,51 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.exception.InvalidInputException;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+
+	@Autowired
+	private HotelRepository hotelRepository;
+
+	@Override
+	public void addNewHotel(Hotel hotel) throws InvalidInputException {
+		 if (hotel.equals(null)) {
+	            throw new InvalidInputException("Invalid Data");
+	        }
+		hotelRepository.save(hotel);
+		
+	}
+
+	@Override
+	public Hotel update(Hotel hotel) {
+		Hotel updatedHotel = hotelRepository.save(hotel);
+		return updatedHotel;
+
+	}
+
+	@Override
+	public Optional<Hotel> getHotelById(Integer hoteId) {
+
+		return hotelRepository.findById(hoteId);
+	}
+
+	@Override
+	public void deleteHotelById(Integer hotelId) {
+		hotelRepository.deleteById(hotelId);
+	}
+
+	@Override
+	public Optional<List<Hotel>> getByCity(String city) {
+		return hotelRepository.findAllByAddressCity(city);
+	}
+
+}

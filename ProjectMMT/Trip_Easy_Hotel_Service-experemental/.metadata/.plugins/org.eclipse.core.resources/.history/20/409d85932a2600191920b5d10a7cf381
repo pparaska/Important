@@ -1,0 +1,25 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+
+
+public class Hotel {
+
+	private Integer hotelId;
+	private String hotelName;
+	private Address address;
+	private HashMap<Integer, String> review;
+	private Set<Room> rooms;
+	private List<String> photos;
+	/*
+	 * private googleMap;
+	 */
+	
+	private Map<String,List<String>> facilities;
+	private String description;
+	
+}

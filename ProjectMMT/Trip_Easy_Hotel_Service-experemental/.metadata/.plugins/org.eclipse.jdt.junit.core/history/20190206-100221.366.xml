@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RestControllerTest" project="hotel-service" tests="8" started="8" failures="0" errors="0" ignored="1">
+  <testsuite name="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.724">
+    <testcase name="testOfGetHotelsByHotelIdDosentExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.461"/>
+    <testcase name="testOfGetHotelsByCityNameDoesntExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.046"/>
+    <testcase name="testOfdeleteHotelByIdExistInDb" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.001" ignored="true"/>
+    <testcase name="testOfGetHotelsByHotelIdExist" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.046"/>
+    <testcase name="testOfBadRequest" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.068"/>
+    <testcase name="testOfAddNewHotel" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.06"/>
+    <testcase name="testOfWrongURL" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.028"/>
+    <testcase name="testOfRightURLGetHotelsByCityNameExistsInDatabse" classname="com.tripeasy.hotel.hotelservice.restcontroller.RestControllerTest" time="0.014"/>
+  </testsuite>
+</testrun>

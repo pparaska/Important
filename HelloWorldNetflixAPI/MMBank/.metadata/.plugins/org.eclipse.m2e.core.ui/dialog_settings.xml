@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\HelloWorldNetflixAPI\MMBank\zuul-proxy-server"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\website"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\Transaction-Service"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\MMbank-eureka-server"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\MMBank-Eureka-config"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\MMbank-config-server"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\Account-Service"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

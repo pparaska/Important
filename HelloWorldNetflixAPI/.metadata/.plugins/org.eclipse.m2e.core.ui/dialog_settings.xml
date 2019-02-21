@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\HelloWorldNetflixAPI\MMBank\website1"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\website"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\Transaction-Service"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\MMBank-Eureka-config"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\MMbank-config-server"/>
+			<item value="C:\HelloWorldNetflixAPI\MMBank\Account-Service"/>
+			<item value="C:\HelloWorldNetflixAPI\APIGateway-ProxyServer"/>
+			<item value="C:\HelloWorldNetflixAPI\APIGateway-Proxy-Server"/>
+			<item value="C:\HelloWorldNetflixAPI\Hello-world-Netflix-APIGateway"/>
+			<item value="C:\HelloWorldNetflixAPI\website"/>
+			<item value="C:\HelloWorldNetflixAPI\hello-world"/>
+			<item value="C:\Cloud\HelloWorld\website"/>
+			<item value="C:\Cloud\HelloWorld\hello-world"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

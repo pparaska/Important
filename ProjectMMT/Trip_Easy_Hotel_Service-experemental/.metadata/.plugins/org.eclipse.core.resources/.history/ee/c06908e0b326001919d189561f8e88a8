@@ -1,0 +1,16 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+
+	@Override
+	public void addNewHotel(Hotel hotel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

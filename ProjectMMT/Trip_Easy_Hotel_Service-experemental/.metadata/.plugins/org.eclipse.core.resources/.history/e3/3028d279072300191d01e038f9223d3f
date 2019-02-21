@@ -1,0 +1,6 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+public class Hotel {
+
+	
+}

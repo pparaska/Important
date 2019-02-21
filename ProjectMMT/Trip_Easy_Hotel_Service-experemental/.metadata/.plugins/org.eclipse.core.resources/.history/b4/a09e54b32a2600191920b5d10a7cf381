@@ -1,0 +1,16 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+import java.util.List;
+
+public class Room {
+
+	private Integer roomNumber;
+	private String roomType;
+	private Double price;
+	private Integer bedCount;
+	private String bedType;
+	private boolean miniBar;
+	private List<String> photos;
+	
+	
+}

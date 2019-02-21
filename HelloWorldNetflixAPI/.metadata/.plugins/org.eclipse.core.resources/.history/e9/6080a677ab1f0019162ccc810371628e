@@ -1,0 +1,5 @@
+package com.capgemini.app.APIGatewayProxyServer.filter;
+
+public class ErrorFilter {
+
+}

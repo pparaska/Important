@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\website-client"/>
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\website"/>
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\Transaction-Service"/>
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\MMbank-eureka-server"/>
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\MMbank-config-server"/>
+			<item value="C:\CircuitBreakerWorkspace\MMBank-Zuul-Server\Account-Service"/>
+			<item value="C:\CircuitBreakerWorkspace\website"/>
+			<item value="C:\CircuitBreakerWorkspace\Hello-World"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

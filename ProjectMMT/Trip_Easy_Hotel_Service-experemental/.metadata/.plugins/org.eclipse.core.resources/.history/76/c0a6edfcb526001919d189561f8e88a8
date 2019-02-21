@@ -1,0 +1,112 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Hotel {
+
+	private Integer hotelId;
+	private String hotelName;
+	private Address address;
+	private HashMap<Integer, String> review;
+	private Set<Room> rooms;
+	private List<String> photos;
+	/*
+	 * private googleMap;
+	 */
+
+	private Map<String, List<String>> facilities;
+	private String description;
+
+	public Hotel() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Hotel(Integer hotelId, String hotelName, Address address, HashMap<Integer, String> review, Set<Room> rooms,
+			List<String> photos, Map<String, List<String>> facilities, String description) {
+		super();
+		this.hotelId = hotelId;
+		this.hotelName = hotelName;
+		this.address = address;
+		this.review = review;
+		this.rooms = rooms;
+		this.photos = photos;
+		this.facilities = facilities;
+		this.description = description;
+	}
+
+	public Integer getHotelId() {
+		return hotelId;
+	}
+
+	public void setHotelId(Integer hotelId) {
+		this.hotelId = hotelId;
+	}
+
+	public String getHotelName() {
+		return hotelName;
+	}
+
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public HashMap<Integer, String> getReview() {
+		return review;
+	}
+
+	public void setReview(HashMap<Integer, String> review) {
+		this.review = review;
+	}
+
+	public Set<Room> getRooms() {
+		return rooms;
+	}
+
+	public void setRooms(Set<Room> rooms) {
+		this.rooms = rooms;
+	}
+
+	public List<String> getPhotos() {
+		return photos;
+	}
+
+	public void setPhotos(List<String> photos) {
+		this.photos = photos;
+	}
+
+	public Map<String, List<String>> getFacilities() {
+		return facilities;
+	}
+
+	public void setFacilities(Map<String, List<String>> facilities) {
+		this.facilities = facilities;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", address=" + address + ", review=" + review
+				+ ", rooms=" + rooms + ", photos=" + photos + ", facilities=" + facilities + ", description="
+				+ description + "]";
+	}
+
+}

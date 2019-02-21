@@ -1,0 +1,94 @@
+package com.tripeasy.hotel.hotelservice.entity;
+
+import java.util.List;
+
+public class Room {
+
+	private Integer roomNumber;
+	private String roomType;
+	private Double price;
+	private Integer bedCount;
+	private String bedType;
+	private boolean miniBar;
+	private List<String> photos;
+
+	public Room() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Room(Integer roomNumber, String roomType, Double price, Integer bedCount, String bedType, boolean miniBar,
+			List<String> photos) {
+		super();
+		this.roomNumber = roomNumber;
+		this.roomType = roomType;
+		this.price = price;
+		this.bedCount = bedCount;
+		this.bedType = bedType;
+		this.miniBar = miniBar;
+		this.photos = photos;
+	}
+
+	public Integer getRoomNumber() {
+		return roomNumber;
+	}
+
+	public void setRoomNumber(Integer roomNumber) {
+		this.roomNumber = roomNumber;
+	}
+
+	public String getRoomType() {
+		return roomType;
+	}
+
+	public void setRoomType(String roomType) {
+		this.roomType = roomType;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public Integer getBedCount() {
+		return bedCount;
+	}
+
+	public void setBedCount(Integer bedCount) {
+		this.bedCount = bedCount;
+	}
+
+	public String getBedType() {
+		return bedType;
+	}
+
+	public void setBedType(String bedType) {
+		this.bedType = bedType;
+	}
+
+	public boolean isMiniBar() {
+		return miniBar;
+	}
+
+	public void setMiniBar(boolean miniBar) {
+		this.miniBar = miniBar;
+	}
+
+	public List<String> getPhotos() {
+		return photos;
+	}
+
+	public void setPhotos(List<String> photos) {
+		this.photos = photos;
+	}
+
+	@Override
+	public String toString() {
+		return "Room [roomNumber=" + roomNumber + ", roomType=" + roomType + ", price=" + price + ", bedCount="
+				+ bedCount + ", bedType=" + bedType + ", miniBar=" + miniBar + ", photos=" + photos + "]";
+	}
+
+}

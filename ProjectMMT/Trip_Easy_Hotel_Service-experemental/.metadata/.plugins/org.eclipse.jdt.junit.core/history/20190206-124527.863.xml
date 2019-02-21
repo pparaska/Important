@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" project="hotel-service" tests="8" started="8" failures="0" errors="0" ignored="3">
+  <testsuite name="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.359">
+    <testcase name="testCreateHotelWithRightData" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.277"/>
+    <testcase name="testGetHotelByInCorrectCityName" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.047"/>
+    <testcase name="testUpdateHotel" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.0" ignored="true"/>
+    <testcase name="testCreateHotelWithWrongData" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.007"/>
+    <testcase name="testGetHotelByCorrectCityName" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.022"/>
+    <testcase name="testGetHotelByWrongId" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.006"/>
+    <testcase name="testDeleteHotelById" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.0" ignored="true"/>
+    <testcase name="testGetHotelById" classname="com.tripeasy.hotel.hotelservice.servicetest.ServiceTest" time="0.0" ignored="true"/>
+  </testsuite>
+</testrun>

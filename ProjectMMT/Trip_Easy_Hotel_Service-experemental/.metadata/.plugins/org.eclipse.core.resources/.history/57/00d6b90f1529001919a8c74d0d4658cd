@@ -1,0 +1,35 @@
+package com.tripeasy.hotel.hotelservice.servicetest;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+import com.tripeasy.hotel.hotelservice.service.HotelService;
+ 
+ 
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@DataMongoTest
+public class ServiceTest {
+
+	@MockBean
+	private HotelRepository hotelRepository;
+	 
+	 @Autowired
+	 private HotelService hotelService;
+
+	 @Test
+	 public void testFindSimpleHotelObject() {
+		 Hotel hotel =  hotelService.getHotelById(101);
+		
+ }
+	 
+}

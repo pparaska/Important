@@ -1,0 +1,23 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.exception.InvalidInputException;
+
+public interface HotelService {
+
+	void addNewHotel(Hotel newHotel) throws InvalidInputException;
+
+	Hotel update(Hotel hotel);
+
+	Optional<Hotel> getHotelById(Integer hoteId) ;
+
+	void deleteHotelById(Integer hotelId);
+
+	Optional<List<Hotel>> getByCity(String city);
+
+}

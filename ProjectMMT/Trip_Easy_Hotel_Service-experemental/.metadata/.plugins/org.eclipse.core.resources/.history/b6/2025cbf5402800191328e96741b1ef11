@@ -1,0 +1,22 @@
+package com.tripeasy.hotel.hotelservice.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+
+@Repository
+public interface HotelRepository extends MongoRepository<Hotel, Integer>{
+
+	//Optional<Hotel> findByHotelName(String hotelName);
+
+	//Optional<Hotel> findHotelByHotelName(String hotelName);
+
+
+	Optional <Hotel>  findByCity(String city);
+
+
+}

@@ -1,0 +1,3 @@
+zuul.routes.AccountService.url=http://localhost:9090
+zuul.routes.TransactionService.url=http://localhost:8989
+zuul.routes.

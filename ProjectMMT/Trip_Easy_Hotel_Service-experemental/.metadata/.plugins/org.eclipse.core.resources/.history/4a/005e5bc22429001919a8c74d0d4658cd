@@ -1,0 +1,5 @@
+package com.tripeasy.hotel.hotelservice.restcontroller;
+
+public class RestControllerTest {
+
+}

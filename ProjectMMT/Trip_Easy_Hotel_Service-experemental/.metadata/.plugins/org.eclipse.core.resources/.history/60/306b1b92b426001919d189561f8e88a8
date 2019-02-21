@@ -1,0 +1,20 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+
+	@Autowired
+	private HotelRepository hotelRepository;
+	
+	@Override
+	public void addNewHotel(Hotel hotel) {
+	hotelRepository.save(hotel);
+	}
+
+}

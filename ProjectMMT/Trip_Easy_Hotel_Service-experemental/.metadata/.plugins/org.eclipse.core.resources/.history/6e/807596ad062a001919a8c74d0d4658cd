@@ -1,0 +1,81 @@
+package com.tripeasy.hotel.hotelservice.service;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tripeasy.hotel.hotelservice.entity.Hotel;
+import com.tripeasy.hotel.hotelservice.entity.Room;
+import com.tripeasy.hotel.hotelservice.exception.InvalidInputException;
+import com.tripeasy.hotel.hotelservice.repository.HotelRepository;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+
+	@Autowired
+	private HotelRepository hotelRepository;
+
+	@Override
+	public void addNewHotel(Hotel hotel) throws InvalidInputException {
+		try {
+			hotelRepository.save(hotel);
+		} catch (Exception e) {
+			throw new InvalidInputException("Invalid  input Data ");
+		}
+
+	}
+
+	@Override
+	public Hotel update(Hotel hotel) throws InvalidInputException {
+
+		try {
+			Hotel updatedHotel = hotelRepository.save(hotel);
+			return updatedHotel;
+		} catch (Exception e) {
+			throw new InvalidInputException("Invalid  input Data ");
+		}
+
+	}
+
+	@Override
+	public Optional<Hotel> getHotelById(Integer hoteId) {
+
+		return hotelRepository.findById(hoteId);
+
+	}
+	
+
+ 
+	@Override
+	public List<Hotel> getAllHotel() {
+
+		return hotelRepository.findAll();
+
+	}
+
+	@Override
+	public void deleteHotelById(Integer hotelId) {
+		hotelRepository.deleteById(hotelId);
+	}
+
+	@Override
+	public Optional<List<Hotel>> getByCity(String city) {
+		return hotelRepository.findAllByAddressCity(city);
+	}
+
+	@Override
+	public void updateRoom(Integer  hotelId, Integer roomNumber, Integer numberOfGuest, Boolean statusAvailable) {
+			
+		/*
+		 * // create an iterator Iterator iterator = hotel.getRooms().iterator(); while
+		 * (iterator.hasNext()) { if(iterator.hasNext()hotel.getRooms().)
+		 * System.out.println("Value: "+iterator.next() + " "); }
+		 */
+		//return null;
+		hotelRepository.saveNumberOfGuestAndStatusAvailableByHotelIdAndRoomNumber(hotelId, roomNumber, numberOfGuest, statusAvailable);
+	}
+
+}
